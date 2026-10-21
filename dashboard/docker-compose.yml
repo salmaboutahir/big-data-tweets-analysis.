@@ -1,0 +1,14 @@
+name: tweets-dashboard
+
+services:
+  dashboard:
+    build: .
+    image: tweets-dashboard:1.0
+    container_name: tweets-dashboard
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data:ro
+      - ./app.py:/app/app.py:ro
+    environment:
+      DATA_DIR: /app/data

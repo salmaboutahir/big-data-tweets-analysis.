@@ -1,0 +1,39 @@
+﻿# IDE
+.vscode/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python cache
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Docker backup files
+docker-compose*.bak*
+
+# Large dataset
+jobs/data.csv
+
+# Generated Java build files
+sma/spark-mas-agent/target/
+
+# Temporary files
+*.log
+
+# Java compiled files
+*.class
+
+# Generated monitoring and test state
+jobs/cpu_results.csv
+jobs/results.csv
+jobs/state.json
+jobs/rebalance_command.json
+
+# Maven build output
+sma/spark-mas-agent/target/
+
+sma/spark-mas-agent/docker-compose.yml

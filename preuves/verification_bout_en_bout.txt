@@ -1,0 +1,99 @@
+﻿=== DATE ===
+
+Saturday, October 10, 2026 2:58:46 PM
+
+
+
+=== 1. CONTENEURS ===
+NAMES            IMAGE                STATUS
+spark-worker-1   apache/spark:3.5.1   Up About an hour
+spark-worker-3   apache/spark:3.5.1   Up About an hour
+spark-worker-2   apache/spark:3.5.1   Up About an hour
+spark-master     apache/spark:3.5.1   Up About an hour
+spark-client     apache/spark:3.5.1   Up About an hour
+kafka            apache/kafka:3.7.0   Up About an hour
+datanode1        hdfs-lab:3.3.6       Up About an hour
+datanode3        hdfs-lab:3.3.6       Up About an hour
+datanode2        hdfs-lab:3.3.6       Up About an hour
+namenode         hdfs-lab:3.3.6       Up About an hour (healthy)
+
+=== 2. KAFKA : TOPICS ===
+__consumer_offsets
+tweets
+tweets_big
+tweets_full
+
+=== 3. KAFKA : OFFSETS tweets_big ===
+tweets_big:0:533555
+tweets_big:1:533019
+tweets_big:2:533426
+
+=== 4. HDFS : ETAT DU CLUSTER ===
+
+Configured Capacity: 3243303530496 (2.95 TB)
+DFS Used: 16396288 (15.64 MB)
+Live datanodes (3):
+Configured Capacity: 1081101176832 (1006.85 GB)
+DFS Used: 2998272 (2.86 MB)
+Non DFS Used: 8327532544 (7.76 GB)
+Configured Capacity: 1081101176832 (1006.85 GB)
+DFS Used: 6168576 (5.88 MB)
+Non DFS Used: 8324366336 (7.75 GB)
+Configured Capacity: 1081101176832 (1006.85 GB)
+DFS Used: 7229440 (6.89 MB)
+Non DFS Used: 8323305472 (7.75 GB)
+
+
+
+=== 5. HDFS : ARBORESCENCE /tweets ===
+
+drwxr-xr-x   - spark  supergroup          0 2026-10-09 20:09 /tweets/connectivity_test
+-rw-r--r--   3 spark  supergroup        733 2026-10-09 20:09 
+/tweets/connectivity_test/part-00000-bd88e071-9818-4f98-89b6-3737b08ea7b4-c000.snappy.parquet
+-rw-r--r--   3 spark  supergroup        789 2026-10-09 20:09 
+/tweets/connectivity_test/part-00001-bd88e071-9818-4f98-89b6-3737b08ea7b4-c000.snappy.parquet
+drwxr-xr-x   - spark  supergroup          0 2026-10-09 13:07 /tweets/raw
+-rw-r--r--   3 spark  supergroup      11190 2026-10-09 13:07 
+/tweets/raw/part-00000-ae30c32d-69cd-42a9-a480-3e29c923362e-c000.snappy.parquet
+drwxr-xr-x   - spark  supergroup          0 2026-10-10 13:50 /tweets/results
+drwxr-xr-x   - spark  supergroup          0 2026-10-10 13:51 /tweets/results/analyse_descriptive_v1
+drwxr-xr-x   - spark  supergroup          0 2026-10-10 13:51 
+/tweets/results/analyse_descriptive_v1/repartition_heure
+-rw-r--r--   3 spark  supergroup        170 2026-10-10 13:51 
+/tweets/results/analyse_descriptive_v1/repartition_heure/part-00000-6cf72d01-8826-4eb6-b9d5-4645e2ad0008-c000.csv
+drwxr-xr-x   - spark  supergroup          0 2026-10-10 13:50 /tweets/results/analyse_descriptive_v1/sentiments
+-rw-r--r--   3 spark  supergroup         38 2026-10-10 13:50 
+/tweets/results/analyse_descriptive_v1/sentiments/part-00000-92f6d271-d8d3-473f-a647-4dac07328573-c000.csv
+drwxr-xr-x   - spark  supergroup          0 2026-10-10 13:50 
+/tweets/results/analyse_descriptive_v1/stats_par_sentiment
+-rw-r--r--   3 spark  supergroup        122 2026-10-10 13:50 
+/tweets/results/analyse_descriptive_v1/stats_par_sentiment/part-00000-7349600f-e5d7-498b-8212-11662e4e5873-c000.csv
+drwxr-xr-x   - spark  supergroup          0 2026-10-10 13:50 /tweets/results/analyse_descriptive_v1/top_hashtags
+-rw-r--r--   3 spark  supergroup        143 2026-10-10 13:50 
+/tweets/results/analyse_descriptive_v1/top_hashtags/part-00000-35023afe-02f1-4109-a363-fe1378cb8059-c000.csv
+drwxr-xr-x   - spark  supergroup          0 2026-10-10 13:51 /tweets/results/analyse_descriptive_v1/top_mentions
+-rw-r--r--   3 spark  supergroup        166 2026-10-10 13:51 
+/tweets/results/analyse_descriptive_v1/top_mentions/part-00000-fada67bc-51ae-4874-a306-f7f77c2dcff1-c000.csv
+drwxr-xr-x   - spark  supergroup          0 2026-10-10 13:50 /tweets/results/analyse_descriptive_v1/top_utilisateurs
+-rw-r--r--   3 spark  supergroup        149 2026-10-10 13:50 
+/tweets/results/analyse_descriptive_v1/top_utilisateurs/part-00000-d132032f-fae7-4ef9-bcbc-c516bb4c8aec-c000.csv
+drwxr-xr-x   - spark  supergroup          0 2026-10-10 13:28 /tweets/sample_10000
+-rw-r--r--   3 spark  supergroup     795682 2026-10-10 13:28 
+/tweets/sample_10000/part-00000-2fc9b87c-372f-4dff-b73d-6231a4d015bb-c000.snappy.parquet
+drwxr-xr-x   - spark  supergroup          0 2026-10-10 13:44 /tweets/sample_random_10000
+-rw-r--r--   3 spark  supergroup     890639 2026-10-10 13:44 
+/tweets/sample_random_10000/part-00000-8b6733d1-aeed-4354-a9e6-5a4f0ba83306-c000.snappy.parquet
+drwxrwxrwx   - hadoop supergroup          0 2026-10-08 12:00 /tweets/test
+-rwxrwxrwx   2 hadoop supergroup         13 2026-10-08 12:00 /tweets/test/test.txt
+drwxr-xr-x   - spark  supergroup          0 2026-10-09 20:15 /tweets/test_kafka_parquet
+-rw-r--r--   3 spark  supergroup      82697 2026-10-09 20:15 
+/tweets/test_kafka_parquet/part-00000-86fce4a1-0691-4024-a952-c5e8b47c26b0-c000.snappy.parquet
+
+
+
+=== 6. SPARK : VERSION ===
+
+   /___/ .__/\_,_/_/ /_/\_\   version 3.5.1
+Using Scala version 2.12.18, OpenJDK 64-Bit Server VM, 11.0.22
+
+
