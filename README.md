@@ -1,4 +1,4 @@
-﻿# Big Data Tweets Analysis
+# Big Data Tweets Analysis
 
 ## Project Overview
 
@@ -19,14 +19,14 @@ Dataset → Apache Kafka → Apache Spark → Hadoop HDFS → Dashboard
 
 ## Main Components
 
-- jobs/ — Data processing and Spark jobs
-- dashboard/ — Interactive dashboard and visualizations
-- conf/ — Spark configuration
-- hadoop-conf/ — Hadoop configuration
-- jars/ — Kafka connector dependencies
-- docker-compose.yml — Spark cluster configuration
-- graphiques/ and graphiques_v2/ — Generated visualizations
-- esultats/ and esultats_v2/ — Analysis results
+- `jobs/` — Data processing and Spark jobs
+- `dashboard/` — Interactive dashboard and visualizations
+- `conf/` — Spark configuration
+- `hadoop-conf/` — Hadoop configuration
+- `jars/` — Kafka connector dependencies
+- `docker-compose.yml` — Spark cluster configuration
+- `graphiques/` and `graphiques_v2/` — Generated visualizations
+- `resultats/` and `resultats_v2/` — Analysis results
 
 ## Spark Cluster
 
